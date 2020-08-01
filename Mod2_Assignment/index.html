@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='ShoppingListCheckOff'>
+	<head>
+		<meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="angular.min.js"></script>
+		<script src="app.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<title>MOD2_Assignment</title>
+	</head>
+	<body>
+		<h1>Check off your Shopping List</h1>
+		<div ng-controller="ToBuyController as lefttoBuy" class="List1">
+			<div>To Buy List:</div>
+			<ul>
+				<li ng-repeat="item in lefttoBuy.items">
+					Buy {{ item.quantity }} {{ item.name }}
+					<button ng-click="lefttoBuy.buy($index)">
+					Bought</button>
+				</li>
+			</ul>
+			<div ng-if="lefttoBuy.items.length == 0">Everything is bought!</div>
+		</div>
+
+		<div ng-controller='AlreadyBoughtController as itembought' class="List2">
+			<div>Already Bought List:</div>
+			<ul>
+				<li ng-repeat="item in itembought.items">
+					Bought {{item.quantity}} {{item.name}}
+				</li>
+			</ul>
+			<div ng-if="itembought.items.length == 0">Nothing bought yet!</div>
+		</div>
+	</body>
+</html>
