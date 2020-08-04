@@ -84,7 +84,7 @@
 							foundItems.push(allItems[i]);
 						}
 					}
-					return foodItems;
+					return foundItems;
 				});
 			}
 		};
