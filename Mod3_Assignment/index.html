@@ -8,16 +8,16 @@
 		<title>MOD3_Assignment</title>
 	</head>
 	<body>
-		<div ng-controller = 'NarrowItDownController as ctrl'>
+		<div ng-controller = 'NarrowItDownController as narrow'>
 			<h1>Narrow Down Your Menu</h1>
 			<div>
-				<input ng-model = "ctrl.searchTerm" type ="text" placeholder="search a term">
+				<input ng-model = "narrow.searchTerm" type ="text" placeholder="search a term">
 			</div>
 			<div>
-				<button ng-click = "ctrl.searchMenuItems()">Narrow It Down For Me! </button>
+				<button ng-click = "narrow.searchMenuItems()">Narrow It Down For Me! </button>
 			</div>
 
-			<found-items items = 'ctrl.found' on-remove='ctrl.removeItem(itemindex)'>
+			<found-items items = 'narrow.found' on-remove='narrow.removeItem(itemindex)'>
 			</found-items>
 		</div>
 	</body>
