@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+	<head>
+		<meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mod4_Assignment</title>
+	</head>
+
+	<body>
+		<h1>Welcome to our Restaurant</h1>
+
+		<ui-view></ui-view>
+
+		<script src = "lib/angular.min.js"></script>
+		<script src = "lib/angular-ui-router.min.js"></script>
+
+		<script src="src/menuapp/menuapp.module.js"></script>
+		<script src="src/data/data.module.js"></script>
+
+		<script src="src/routes.js"></script>
+
+		<script src="src/menuapp/categories.component.js"></script>
+		<script src="src/menuapp/items.component.js"></script>
+		<script src="src/menuapp/categories.controller.js"></script>
+		<script src="src/menuapp/items.controller.js"></script>
+		<script src="src/data/menudata.service.js"></script>
+
+	</body>
+</html>
